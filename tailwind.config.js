@@ -4,7 +4,6 @@ import colors from 'tailwindcss/colors.js';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -14,7 +13,6 @@ export default {
         "./vendor/wireui/wireui/src/WireUi/**/*.php",
         "./vendor/wireui/wireui/src/Components/**/*.php",
     ],
-
     theme: {
         extend: {
             colors: {
@@ -26,10 +24,8 @@ export default {
             },
         },
     },
-
     presets: [
         require("./vendor/wireui/wireui/tailwind.config.js")
     ],
-
     plugins: [forms],
 };

@@ -15,11 +15,19 @@ class Note extends Model
         'body',
         'send_date',
         'is_published',
-        'heart_counter'
+        'heart_counter',
+        'recipient',
+    ];
+
+    protected $casts = [
+        'send_date' => 'datetime',
+        'is_published' => 'boolean',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
+
+
 }
