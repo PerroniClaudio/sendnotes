@@ -12,10 +12,10 @@ new class extends Component {
 
     public function submit() {
         $this->validate([
-            'noteTitle' => 'required,string,min:5',
-            'noteRecipient' => 'required,email',
-            'noteBody' => 'required,string,min:20',
-            'noteSendDate' => 'required,date'
+            'noteTitle' => 'required|string|min:5',
+            'noteRecipient' => 'required|email',
+            'noteBody' => 'required|string|min:20',
+            'noteSendDate' => 'required|date'
         ]);
 
         Auth::user()->notes()->create([
